@@ -1,0 +1,64 @@
+# def...
+snippet "\b(de)?f" "def <name>..." r
+def ${1:function_name}${2:(${3:*args})}
+  ${0:# TODO}
+end
+endsnippet
+
+# def...
+snippet "\bdefs" "def self.<name>..." r
+def self.${1:function_name}${2:(${3:*args})}
+  ${0:# TODO}
+end
+endsnippet
+
+# def...
+snippet "\b(re)?q" "require '<name>'" r
+require '${0:name}'
+endsnippet
+
+# just common route the sinatra way
+snippet delete "delete 'path' do; ... ; end" b
+delete ${1:'${2:/}'} do
+  ${0:# TODO}
+end
+endsnippet
+
+snippet get "get 'path' do; ... ; end" b
+get ${1:'${2:/:id}'} do
+  ${0:# TODO}
+end
+endsnippet
+
+snippet post "post 'path' do; ... ; end" b
+post ${1:'${2:/}'} do
+  ${0:# TODO}
+end
+endsnippet
+
+snippet put "put 'path' do; ... ; end" b
+put ${1:'${2:/:id}'} do
+  ${0:# TODO}
+end
+endsnippet
+
+# Gemfile
+snippet g "gem '...'" b
+gem '${1:lib}'
+$0
+endsnippet
+
+# Rakefile
+snippet task "desc '...';task :task_name do; ... ; end" b
+desc "${1:description}"
+task ${2::default} do
+  ${0:# TODO}
+end
+endsnippet
+
+# rspec
+snippet it "it ' should ...' do; ... ; end" b
+it "should $1" do
+  ${0:# TODO}
+end
+endsnippet

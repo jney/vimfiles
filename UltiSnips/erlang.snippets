@@ -1,0 +1,18 @@
+snippet -aut "-author('author')." b
+-author('${1:Jean-Sebastien Ney} <${0:jeansebastien.ney@gmail.com}>').
+endsnippet
+
+snippet -exp "-export([])." b
+-export([${1:module_name}/${0:0}]).
+endsnippet
+
+snippet fn "function with comments" b
+%% @spec ${1:fn_name}() -> ${2:signature expected}
+%% @doc ${3:What this function does}.
+$1(${4:Args}) ->
+	${0:%% TODO}
+endsnippet
+
+snippet -mod "-module(module_name)." b
+-module(${0:module_name}).
+endsnippet

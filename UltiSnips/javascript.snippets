@@ -1,0 +1,36 @@
+snippet .for "forEach" w
+.forEach(function (${1:e}) {
+  $0
+} /* , this */);
+endsnippet
+
+snippet fun "function() {}" w
+function ($1) { $0 }
+endsnippet
+
+snippet log "console.log();"
+console.log('$1');
+$0
+endsnippet
+
+snippet r "require('lib');"
+require('${1:lib}')$0
+endsnippet
+
+snippet v "var ..."
+var $1 = $2;
+$0
+endsnippet
+
+# for express
+snippet app.get "app.get"
+app.get('${1:/}', function (req, res) {
+  $0
+});
+endsnippet
+
+snippet app.post "app.post"
+app.post('${1:/}', function (req, res) {
+  $0
+});
+endsnippet
